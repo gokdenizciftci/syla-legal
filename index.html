@@ -2,103 +2,199 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SYLA AI | Legal, Privacy & EULA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #7c4dff; --bg: #050508; --card: #0d0d14; }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--bg); color: #fff; font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
-        header { text-align: center; border-bottom: 1px solid #1a1a1a; padding-bottom: 40px; margin-bottom: 40px; }
-        .logo { font-size: 38px; font-weight: 200; letter-spacing: 12px; color: #fff; text-transform: uppercase; }
-        .subtitle { color: var(--accent); font-size: 14px; margin-top: 10px; letter-spacing: 2px; }
-        .nav-langs { position: sticky; top: 0; background: rgba(5, 5, 8, 0.9); backdrop-filter: blur(10px); display: flex; justify-content: center; gap: 10px; padding: 20px 0; z-index: 1000; border-bottom: 1px solid #1a1a1a; margin-bottom: 30px; }
-        .nav-langs a { color: #888; text-decoration: none; font-size: 12px; border: 1px solid #333; padding: 6px 14px; border-radius: 30px; transition: 0.3s; }
-        .nav-langs a:hover { border-color: var(--accent); color: var(--accent); }
-        .card { background: var(--card); border: 1px solid #1a1a1a; border-radius: 24px; padding: 40px; margin-bottom: 50px; }
-        h2 { color: var(--accent); font-size: 24px; margin-bottom: 25px; border-left: 4px solid var(--accent); padding-left: 15px; }
-        h3 { color: #fff; margin-top: 30px; font-size: 18px; border-bottom: 1px solid #1a1a1a; padding-bottom: 10px; }
-        p, li { color: #b0b0b0; font-size: 15px; }
-        .warning-box { border: 1px solid #ff4d4d; background: rgba(255, 77, 77, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
-        .warning-box strong { color: #ff4d4d; display: block; margin-bottom: 5px; }
-        footer { text-align: center; color: #444; font-size: 12px; margin-top: 50px; padding-bottom: 40px; }
+        :root {
+            --bg-color: #000000;
+            --text-main: #d9d9d9;
+            --text-muted: #71767b;
+            --border-color: #2f3336;
+            --accent: #ffffff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden; /* Mobilde sağa sola kaymayı kesin engeller */
+            width: 100%;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .lang-section {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .lang-section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .note {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 30px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+        strong {
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">SYLA AI</div>
-            <div class="subtitle">LEGAL, PRIVACY & EULA</div>
-            <p style="font-size: 13px; color: #666;">Developer: Gökdeniz Çiftçi | gokdenizciftciq@icloud.com</p>
-        </header>
 
-        <div class="nav-langs">
-            <a href="#en">ENGLISH</a> <a href="#tr">TÜRKÇE</a> <a href="#de">DEUTSCH</a> <a href="#es">ESPAÑOL</a> <a href="#fr">FRANÇAIS</a>
+<div class="container">
+    <header>
+        <div class="logo">SYLA AI BEST FRIEND</div>
+        <div class="contact-info">
+            GLOBAL LEGAL SHIELD<br>
+            Legal Contact & Data Controller: Gökdeniz Çiftçi | Turkey<br>
+            Contact: gokdenizciftciq@icloud.com
         </div>
+    </header>
 
-        <section id="en" class="card">
-            <h2>Legal Shield (English)</h2>
-            <p class="note"><em>Note: In the event of any conflict between the English version and any translated version, the English version shall prevail.</em></p>
-            <h3>1. PRIVACY POLICY</h3>
-            <p><strong>Data Collection & Usage:</strong> We collect your basic profile data and chat logs solely to provide and improve your personalized AI experience. Your data is processed securely using third-party services (OpenAI, Google Firebase, RevenueCat).</p>
-            <p><strong>Right to Erasure:</strong> You can permanently delete your account and all associated chat history at any time using the "Delete Account" button within the app.</p>
-            <div class="warning-box">
-                <strong>SYLA AI DISCLAIMER:</strong> SYLA is an artificial intelligence entity. The Developer makes no warranties regarding the accuracy, reliability, or emotional impact of the AI's responses. Not a substitute for medical or professional advice.
-            </div>
-            <h3>2. TERMS OF SERVICE & EULA</h3>
-            <p>Developer Gökdeniz Çiftçi is not liable for any psychological distress, physical harm, or financial loss. Governing law: Republic of Turkey, Courts of Konya.</p>
-        </section>
+    <div class="lang-section">
+        <h2>🇬🇧 ENGLISH (Master Legal Version)</h2>
+        <div class="note">Note: In the event of any conflict between the English version of this document and any translated version, the English version shall exclusively prevail and govern.</div>
 
-        <section id="tr" class="card">
-            <h2>Yasal Koruma (Türkçe)</h2>
-            <h3>1. GİZLİLİK POLİTİKASI</h3>
-            <p><strong>Veri Toplama ve Kullanımı:</strong> Sohbet kayıtlarınız OpenAI ve Firebase üzerinde güvenle işlenir. Verileriniz asla satılmaz.</p>
-            <p><strong>Silme Hakkı:</strong> Uygulama içindeki "Hesabımı Sil" butonu ile her şeyi kalıcı olarak yok edebilirsiniz.</p>
-            <div class="warning-box">
-                <strong>YAPAY ZEKA UYARISI:</strong> SYLA bir AI'dır. Hatalı veya kurgusal cevaplar verebilir. Tıbbi veya psikolojik bir danışman değildir. Acil durumlarda lütfen yerel yetkililerle iletişime geçin.
-            </div>
-            <h3>2. KULLANIM KOŞULLARI (EULA)</h3>
-            <p>Geliştirici Gökdeniz Çiftçi, AI etkileşiminden doğan hiçbir zarardan sorumlu tutulamaz. Anlaşmazlık durumunda Konya Mahkemeleri yetkilidir.</p>
-        </section>
+        <h3>1. PRIVACY POLICY</h3>
+        <p><strong>Data Collection & Usage:</strong> We collect your basic profile data and chat logs solely to provide and improve your personalized AI experience. Your data is processed securely using third-party services (OpenAI for processing, Google Firebase for storage, RevenueCat for subscriptions).</p>
+        <p><strong>Zero Data Selling:</strong> Your personal and conversational data is NEVER sold to data brokers or third parties for marketing purposes.</p>
+        <p><strong>Right to Erasure:</strong> You maintain full control over your data. You can permanently delete your account and all associated chat history at any time using the "Delete Account" button within the app.</p>
 
-        <section id="de" class="card">
-            <h2>Rechtsschild (Deutsch)</h2>
-            <h3>1. DATENSCHUTZERKLÄRUNG</h3>
-            <p>Ihre Daten werden sicher verarbeitet (OpenAI, Firebase). Wir verkaufen Ihre persönlichen Daten niemals.</p>
-            <p><strong>Recht auf Löschung:</strong> Sie können Ihr Konto jederzeit in der App löschen.</p>
-            <div class="warning-box">
-                <strong>KI-HAFTUNGSAUSSCHLUSS:</strong> SYLA ist eine künstliche Intelligenz. Der Entwickler haftet nicht für die Richtigkeit der Antworten. Keine medizinische Beratung.
-            </div>
-            <h3>2. NUTZUNGSBEDINGUNGEN</h3>
-            <p>Es gilt das Recht der Republik Türkei. Gerichtsstand ist Konya, Türkei.</p>
-        </section>
-
-        <section id="es" class="card">
-            <h2>Protección Legal (Español)</h2>
-            <h3>1. POLÍTICA DE PRIVACIDAD</h3>
-            <p>Sus datos se procesan de forma segura. Puede eliminar su cuenta en cualquier momento.</p>
-            <div class="warning-box">
-                <strong>DESCARGO DE RESPONSABILIDAD DE IA:</strong> SYLA es una inteligencia artificial. No proporciona asesoramiento médico o profesional.
-            </div>
-            <h3>2. TÉRMINOS DEL SERVICIO</h3>
-            <p>Ley aplicable: República de Turquía, tribunales de Konya.</p>
-        </section>
-
-        <section id="fr" class="card">
-            <h2>Protection Juridique (Français)</h2>
-            <h3>1. POLITIQUE DE CONFIDENTIALITÉ</h3>
-            <p>Vos données sont traitées en toute sécurité. Droit à l'effacement permanent via l'application.</p>
-            <div class="warning-box">
-                <strong>CLAUSE DE NON-RESPONSABILITÉ IA:</strong> SYLA est une intelligence artificielle. Ne remplace pas un avis médical professionnel.
-            </div>
-            <h3>2. CONDITIONS D'UTILISATION</h3>
-            <p>Droit applicable: République de Turquie, tribunaux de Konya.</p>
-        </section>
-
-        <footer>
-            &copy; 2026 Gökdeniz Çiftçi. All Rights Reserved.
-        </footer>
+        <h3>2. TERMS OF SERVICE & EULA</h3>
+        <p><strong>AI Disclaimer & Limitation of Liability:</strong> SYLA is an artificial intelligence entity. The Developer makes no warranties regarding the accuracy, reliability, or emotional impact of the AI's responses. Under no circumstances shall the Developer be liable for any psychological distress, physical harm, or financial loss resulting from your interaction with SYLA.</p>
+        <p><strong>No Medical or Psychological Advice:</strong> SYLA DOES NOT provide medical, psychiatric, or psychological advice. It is not a substitute for professional help. In case of emergencies, contact your local authorities immediately.</p>
+        <p><strong>Subscriptions:</strong> Premium features are billed via the Apple App Store. Subscriptions auto-renew unless canceled 24 hours prior to the period's end. All refunds are strictly governed by Apple's policies.</p>
+        <p><strong>Governing Law:</strong> These terms shall be governed by the laws of the Republic of Turkey. Any disputes shall be resolved exclusively in the courts of Turkey.</p>
     </div>
+
+    <div class="lang-section">
+        <h2>🇹🇷 TÜRKÇE (KVKK Uyumlu)</h2>
+        <div class="note">Not: Bu belgenin İngilizce versiyonu ile çevrilmiş herhangi bir versiyonu arasında çelişki olması durumunda, münhasıran İngilizce versiyon geçerli olacaktır.</div>
+
+        <h3>1. GİZLİLİK POLİTİKASI</h3>
+        <p><strong>Veri Toplama ve Kullanımı:</strong> Yalnızca size kişiselleştirilmiş bir yapay zeka deneyimi sunmak ve bu deneyimi geliştirmek amacıyla temel profil verilerinizi ve sohbet kayıtlarınızı topluyoruz. Verileriniz üçüncü taraf hizmetler (işleme için OpenAI, depolama için Google Firebase, abonelikler için RevenueCat) kullanılarak güvenli bir şekilde işlenir.</p>
+        <p><strong>Sıfır Veri Satışı:</strong> Kişisel ve sohbet verileriniz ASLA veri tüccarlarına veya pazarlama amacıyla üçüncü şahıslara satılmaz.</p>
+        <p><strong>Silme Hakkı (Unutulma):</strong> Verileriniz üzerinde tam kontrole sahipsiniz. Uygulama içindeki "Hesabımı Sil" butonunu kullanarak hesabınızı ve ilişkili tüm sohbet geçmişinizi dilediğiniz zaman kalıcı olarak silebilirsiniz.</p>
+
+        <h3>2. KULLANIM KOŞULLARI VE EULA</h3>
+        <p><strong>Yapay Zeka Sorumluluk Reddi ve Sınırlandırması:</strong> SYLA bir yapay zeka varlığıdır. Geliştirici, yapay zekanın yanıtlarının doğruluğu, güvenilirliği veya duygusal etkisi hakkında hiçbir garanti vermez. Geliştirici, SYLA ile etkileşiminizden doğabilecek hiçbir psikolojik rahatsızlık, fiziksel zarar veya finansal kayıptan hiçbir koşulda sorumlu tutulamaz.</p>
+        <p><strong>Tıbbi veya Psikolojik Tavsiye Verilmez:</strong> SYLA tıbbi, psikiyatrik veya psikolojik tavsiye VERMEZ. Profesyonel yardımın yerine geçmez. Acil durumlarda derhal yerel yetkililerle iletişime geçin.</p>
+        <p><strong>Abonelikler:</strong> Premium özellikler Apple App Store üzerinden faturalandırılır. Abonelikler, dönem bitiminden 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir. Tüm iadeler kesinlikle Apple'ın politikalarına tabidir.</p>
+        <p><strong>Geçerli Kanun:</strong> Bu koşullar Türkiye Cumhuriyeti yasalarına tabidir. Herhangi bir anlaşmazlık durumunda münhasıran Türkiye mahkemeleri yetkilidir.</p>
+    </div>
+
+    <div class="lang-section">
+        <h2>🇩🇪 DEUTSCH (GDPR / DSGVO Konform)</h2>
+        <div class="note">Hinweis: Bei Widersprüchen zwischen der englischen Version dieses Dokuments und einer übersetzten Version ist ausschließlich die englische Version maßgeblich.</div>
+
+        <h3>1. DATENSCHUTZERKLÄRUNG</h3>
+        <p><strong>Datenerfassung & Nutzung:</strong> Wir erfassen Ihre Basis-Profildaten und Chat-Protokolle ausschließlich, um Ihr personalisiertes KI-Erlebnis bereitzustellen. Ihre Daten werden über Drittanbieter (OpenAI, Google Firebase, RevenueCat) sicher verarbeitet.</p>
+        <p><strong>Kein Datenverkauf:</strong> Ihre persönlichen Daten und Chat-Verläufe werden NIEMALS an Datenhändler verkauft.</p>
+        <p><strong>Recht auf Löschung:</strong> Sie können Ihr Konto und alle damit verbundenen Daten jederzeit über die Schaltfläche "Konto löschen" in der App dauerhaft löschen.</p>
+
+        <h3>2. NUTZUNGSBEDINGUNGEN & EULA</h3>
+        <p><strong>KI-Haftungsausschluss:</strong> SYLA ist eine künstliche Intelligenz. Der Entwickler übernimmt keine Garantie für die Richtigkeit oder emotionale Auswirkung der Antworten. Der Entwickler haftet unter keinen Umständen für psychische Belastungen oder Schäden.</p>
+        <p><strong>Keine medizinische Beratung:</strong> SYLA bietet KEINE medizinische, psychiatrische oder psychologische Beratung.</p>
+        <p><strong>Abonnements:</strong> Premium-Funktionen werden über den Apple App Store abgerechnet und verlängern sich automatisch.</p>
+        <p><strong>Geltendes Recht:</strong> Es gilt das Recht der Republik Türkei. Gerichtsstand ist die Türkei.</p>
+    </div>
+
+    <div class="lang-section">
+        <h2>🇪🇸 ESPAÑOL</h2>
+        <div class="note">Nota: En caso de conflicto entre la versión en inglés de este documento y cualquier versión traducida, prevalecerá exclusivamente la versión en inglés.</div>
+
+        <h3>1. POLÍTICA DE PRIVACIDAD</h3>
+        <p><strong>Recopilación y Uso de Datos:</strong> Recopilamos sus datos básicos y registros de chat únicamente para proporcionar una experiencia de IA personalizada. Sus datos se procesan de forma segura a través de terceros (OpenAI, Google Firebase, RevenueCat).</p>
+        <p><strong>Cero Venta de Datos:</strong> Sus datos personales y conversaciones NUNCA se venden a intermediarios de datos.</p>
+        <p><strong>Derecho de Supresión:</strong> Puede eliminar permanentemente su cuenta y el historial de chat en cualquier momento mediante el botón "Eliminar cuenta" en la aplicación.</p>
+
+        <h3>2. TÉRMINOS DE SERVICIO Y EULA</h3>
+        <p><strong>Descargo de Responsabilidad de IA:</strong> SYLA es una inteligencia artificial. El Desarrollador no garantiza la exactitud o el impacto emocional de las respuestas y no será responsable de ninguna angustia psicológica o daño.</p>
+        <p><strong>Sin Asesoramiento Médico:</strong> SYLA NO proporciona asesoramiento médico, psiquiátrico o psicológico.</p>
+        <p><strong>Suscripciones:</strong> Las funciones premium se facturan a través de Apple App Store y se renuevan automáticamente.</p>
+        <p><strong>Ley Aplicable:</strong> Estos términos se regirán por las leyes de la República de Turquía. La jurisdicción exclusiva serán los tribunales de Turquía.</p>
+    </div>
+
+    <div class="lang-section">
+        <h2>🇫🇷 FRANÇAIS</h2>
+        <div class="note">Note : En cas de conflit entre la version anglaise de ce document et toute version traduite, la version anglaise prévaudra exclusivement.</div>
+
+        <h3>1. POLITIQUE DE CONFIDENTIALITÉ</h3>
+        <p><strong>Collecte et Utilisation des Données:</strong> Nous collectons vos données de profil et journaux de discussion uniquement pour fournir une expérience d'IA personnalisée, traitées de manière sécurisée (OpenAI, Google Firebase, RevenueCat).</p>
+        <p><strong>Aucune Vente de Données:</strong> Vos données personnelles ne sont JAMAIS vendues à des courtiers en données.</p>
+        <p><strong>Droit à l'Effacement:</strong> Vous pouvez supprimer définitivement votre compte et l'historique des discussions à tout moment via le bouton "Supprimer le compte" dans l'application.</p>
+
+        <h3>2. CONDITIONS D'UTILISATION ET EULA</h3>
+        <p><strong>Clause de Non-Responsabilité IA:</strong> SYLA est une intelligence artificielle. Le Développeur ne garantit pas l'exactitude des réponses et ne peut être tenu responsable d'aucune détresse psychologique ou dommage.</p>
+        <p><strong>Aucun Avis Médical:</strong> SYLA NE FOURNIT PAS de conseils médicaux, psychiatriques ou psychologiques.</p>
+        <p><strong>Abonnements:</strong> Les fonctions premium sont facturées via l'Apple App Store et se renouvellent automatiquement.</p>
+        <p><strong>Droit Applicable:</strong> Ces conditions sont régies par les lois de la République de Turquie. Tout litige sera résolu exclusivement devant les tribunaux de Turquie.</p>
+    </div>
+
+    <footer>
+        &copy; 2026 Gökdeniz Çiftçi. All Rights Reserved.
+    </footer>
+</div>
+
 </body>
 </html>
